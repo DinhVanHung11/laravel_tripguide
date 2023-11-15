@@ -1,0 +1,129 @@
+//Button
+.button-primary{
+    .flex-center-center;
+    background: @color-theme;
+    color: @color-white;
+    padding-block: 8px;
+    font-size: 14px;
+    font-weight: @font-bold;
+    border-radius: 6px;
+    height: 34px;
+
+    @media(min-width: @screen__l){
+        padding-block: 10px;
+        font-size: 20px;
+        height: 48px;
+    }
+}
+
+.button-submit{
+    background: @color-theme !important;
+    border-color: @color-theme !important;
+    color: @color-white
+}
+
+//Form Group
+.form-row{
+    gap: 0 10px;
+
+    > .form-group{
+        width: 50%;
+        flex-shrink: 0;
+    }
+
+    @media(min-width: @screen__l){
+        gap: 0 14px;
+    }
+}
+
+select,input{
+    &:focus{
+        border: unset !important;
+        box-shadow: unset !important;
+        background: transparent !important;
+    }
+}
+
+.form-group{
+    &:not(:last-child){
+        margin-bottom: 14px;
+    }
+
+    label{
+        display: inline-block;
+        font-size: 10px;
+        color: @color-grayc3;
+        margin-bottom: 6px;
+    }
+
+    .input-wrap{
+        .flex-center-btw;
+        background: @color-grayc6;
+        border-radius: 6px;
+        width: 100%;
+        padding-right: 10px;
+    }
+
+    input{
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        border: none;
+
+        &:focus{
+            border: unset !important;
+            box-shadow: unset !important;
+            background: transparent !important;
+        }
+    }
+
+    .toggle-show-password{
+        cursor: pointer;
+
+        img{
+            &:not(.active){
+                display: none;
+            }
+        }
+    }
+
+    @media(min-width: @screen__l){
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+
+        label{
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .input-wrap{
+            padding-right: 14px;
+        }
+
+        input{
+            padding: 13.5px 14px;
+        }
+    }
+}
+
+.checkbox-wrap{
+    .flex;
+    align-items: flex-start;
+
+    input{
+        display: block;
+        margin-top: 3px;
+    }
+
+    label{
+        padding-left: 12px;
+    }
+
+    @media(min-width: @screen__l){
+        label{
+            padding-left: 14px;
+        }
+    }
+}
+

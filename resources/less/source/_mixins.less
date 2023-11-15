@@ -1,0 +1,35 @@
+.flex{
+    display: flex;
+}
+
+.flex-center{
+    .flex;
+    align-items: center;
+}
+
+.flex-center-center{
+    .flex-center;
+    justify-content: center;
+}
+
+.flex-center-btw{
+    .flex-center;
+    justify-content: space-between;
+}
+
+.hideScroll{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.line-clamp (@line-number){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @line-number;
+            line-clamp: @line-number;
+    -webkit-box-orient: vertical;
+}

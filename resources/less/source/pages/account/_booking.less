@@ -1,0 +1,46 @@
+.account-booking-index{
+    background: #FAFAFB;
+
+    .bookings-tabs-nav{
+        .tab-item{
+            position: relative;
+            cursor: pointer;
+
+            &::before{
+                position: absolute;
+                content: '';
+                width: 0;
+                height: 5px;
+                border-radius: 4px;
+                background: @color-theme;
+                left: 0;
+                bottom: -23px;
+                transition: all 0.25s;
+            }
+
+            &.active,
+            &:hover{
+                &::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bookings-main{
+        .booking-content{
+            display: none;
+
+            &.active{
+                display: block;
+            }
+        }
+
+        .my-booking-item{
+            padding: 20px 30px;
+            border-radius: 10px;
+            background: @color-white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    }
+}

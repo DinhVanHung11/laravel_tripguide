@@ -1,0 +1,43 @@
+.explore-world{
+    position: relative;
+
+    .explore-list{
+        margin: 0 -15px;
+    }
+
+    .slick-track{
+        display: flex;
+    }
+
+    .button-slide{
+        position: absolute;
+        top: -100px;
+        color: #84878B;
+        background: #E6E8EC;
+
+        &.slick-next{
+            right: 15px;
+        }
+
+        &.slick-prev{
+            right: 60px;
+        }
+
+        &.slick-disabled{
+            color: #B1B5C3;
+            background: #F4F5F6;
+        }
+    }
+
+    .explore-item{
+        padding: 0 15px;
+    }
+
+    .hotel-rating{
+        background: rgba(49, 107, 255, 0.20);
+    }
+
+    .hotel-name{
+        .line-clamp(1);
+    }
+}

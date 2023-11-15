@@ -1,0 +1,28 @@
+.pager{
+    margin-top: 30px;
+
+    .page-item{
+        &:not(:first-child, :last-child){
+            background: @color-white;
+            box-shadow: 0 0 8px rgba(0,0,0,0.08);
+            border-radius: 5px;
+
+            span,a{
+                padding: 4px 12px;
+                border-radius: 5px;
+            }
+
+            span{
+                background: @color-theme;
+                color: @color-white;
+            }
+        }
+
+        // span{
+        //     padding: 4px 12px;
+        //     border-radius: 5px;
+        //     background: @color-theme;
+        //     color: @color-white;
+        // }
+    }
+}

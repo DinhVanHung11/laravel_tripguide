@@ -1,0 +1,135 @@
+.modal-auth-content{
+    &:not(.active){
+        display: none;
+    }
+
+    h4{
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .auth-quick{
+        gap: 0 8px;
+        margin-bottom: 14px;
+    }
+
+    .google-link{
+        width: 100%;
+        gap: 0 8px;
+    }
+
+    .facebook-link{
+        .flex-center-center;
+        flex-shrink: 0;
+        width: 34px;
+        background: @color-grayc3;
+        border-radius: 6px;
+    }
+
+    .auth-or{
+        .flex-center;
+        gap: 0 7px;
+        margin-bottom: 12px;
+
+        span{
+            height: 1px;
+            background: @color-grayc6;
+            display: inline-block;
+            width: 100%;
+        }
+
+        p{
+            font-size: 10px;
+            color: @color-grayc4;
+            flex-shrink: 0;
+        }
+    }
+
+    .forgot-password{
+        margin-top: 12px;
+        margin-bottom: 15px;
+        color: @color-blue20;
+        text-align: right;
+        display: block;
+        font-size: 10px;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .action{
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .auth-terms{
+        font-size: 9px;
+        margin-bottom: 14px;
+        max-width: 62%;
+
+        a{
+            color: @color-blue20;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .auth-other{
+        text-align: center;
+        font-size: 10px;
+
+        a{
+            color: @color-blue20;
+
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+
+@media(min-width: @screen__l){
+    .modal-auth-content{
+        h4{
+            font-size: 40px;
+        }
+
+        .auth-quick{
+            gap: 0 12px;
+            margin-bottom: 20px;
+        }
+
+        .facebook-link{
+            width: 48px;
+        }
+
+        .auth-or{
+            gap: 0 10px;
+            margin-bottom: 20px;
+
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .forgot-password{
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .auth-terms{
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .auth-other{
+            font-size: 14px;
+        }
+    }
+}

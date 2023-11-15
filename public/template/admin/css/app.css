@@ -1,0 +1,27 @@
+.card-body .select2-container--default .select2-selection--multiple .select2-selection__choice{
+    color: black;
+}
+
+.card-body .select2-container--default .select2-selection--multiple .select2-selection__choice__display{
+    padding-left: 8px;
+}
+
+.image-show-item{
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.image-show-item img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+.image-show-item span{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}

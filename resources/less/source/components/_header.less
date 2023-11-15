@@ -1,0 +1,111 @@
+.page-header{
+    background: @color-white;
+
+    .header-top{
+        .flex-center-btw;
+        max-width: @layout-max-w-lg;
+        padding: @layout__width-indent;
+        margin: 0 auto;
+    }
+
+    .header-logo{
+        a{
+            .flex-center;
+            gap: 0 10px;
+        }
+
+        img{
+            max-height: 40px;
+        }
+
+        strong{
+            font-size: 12px;
+            font-family: @font-third;
+        }
+    }
+
+    .header-right{
+        .flex-center;
+        font-family: @font-fourth;
+        font-size: 12px;
+
+        &:hover{
+            .header-account-dropdown{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    .header-account-dropdown{
+        transition: all 0.2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .header-action{
+        .flex-center;
+        gap: 0 10px;
+        padding-right: 16px;
+        border-right: 1px solid @color-grayc6;
+
+        .price-type{
+            color: @color-grayc4;
+            font-weight: @font-bold;
+        }
+    }
+
+    .header-noti{
+        position: relative;
+        cursor: pointer;
+
+        span{
+            .flex-center-center;
+            position: absolute;
+            top: 0;
+            right: -2px;
+            color: @color-white;
+            font-size: 6px;
+            font-weight: @font-medium;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: @color-red;
+        }
+    }
+
+    .header-profile{
+        .flex-center;
+        gap: 0 10px;
+        padding-left: 16px;
+        font-weight: @font-medium;
+        cursor: pointer;
+
+        .avatar{
+            width: 28px;
+            height: 28px;
+            object-fit: cover;
+        }
+    }
+}
+
+@media(min-width: @screen__l){
+    .page-header{
+        .header-logo{
+            strong{
+                font-size: 20px;
+            }
+        }
+
+        .header-right{
+            font-size: 14px;
+        }
+
+        .header-profile{
+            .avatar{
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+}
