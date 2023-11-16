@@ -7,10 +7,13 @@ use App\Http\Controllers\AdminAuth\EmailVerificationPromptController;
 use App\Http\Controllers\AdminAuth\NewPasswordController;
 use App\Http\Controllers\AdminAuth\PasswordController;
 use App\Http\Controllers\AdminAuth\PasswordResetLinkController;
+use App\Http\Controllers\AdminAuth\RegisteredAdminController;
 use App\Http\Controllers\AdminAuth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest:admin')->group(function () {
+    Route::get('admin/register', [RegisteredAdminController::class, 'create'])->name('admin.register');
+    Route::post('admin/register', [RegisteredAdminController::class, 'store'])->name('admin.register.store');
 
     Route::get('admin/login', [AuthenticatedSessionController::class, 'create'])
                 ->name('admin.login');
@@ -49,6 +52,6 @@ Route::middleware('auth:admin')->group(function () {
 
     Route::put('admin/password', [PasswordController::class, 'update'])->name('admin.password.update');
 
-    Route::post('admin/logout', [AuthenticatedSessionController::class, 'destroy'])
+    Route::get('admin/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('admin.logout');
 });
