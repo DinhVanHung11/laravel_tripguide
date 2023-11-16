@@ -28,6 +28,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ *
+ * Deploy free hosting https://infinityfree.com
+ *
+ * db name: if0_35433120_laravel_tripguide
+ *
+ * Cpanel URL: http://cpanel.infinityfree.com
+ * Username:   if0_35433120
+ * Password:   c968jvrt
+
+ * FTP Username:  if0_35433120
+ * FTP Password:  c968jvrt
+ * FTP HostName:  ftp.infinityfree.com
+
+ * MySQL Host Name: sql301.infinityfree.com
+ * MySQL Password:  c968jvrt
+ * MySQL UserName:  if0_35433120
+ *
+ */
+
 Route::get('/', [MainController::class, 'index'])->name('home');
 
 Route::prefix('services')->group(function(){
@@ -152,3 +172,5 @@ Route::middleware(['auth:admin', 'verified'])->prefix('admin')->group(function()
 });
 
 require __DIR__.'/adminauth.php';
+
+// UPDATE hotels SET image = "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" WHERE id BETWEEN 91 and 100;
