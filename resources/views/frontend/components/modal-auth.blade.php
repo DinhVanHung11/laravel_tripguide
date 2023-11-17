@@ -48,7 +48,7 @@
                 <img src="{{asset('images/icon-gg.svg')}}" alt="">
                 <span>Sign in with Google</span>
             </a>
-            <a href="#" class="signup-google-link facebook-link">
+            <a href="{{ route('social.auth.redirect') }}" class="signup-google-link facebook-link">
                 {{-- <img src="{{asset('images/icon-text-facebook.svg')}}" alt=""> --}}
                 <i class="text-white fa-brands fa-facebook-f"></i>
             </a>

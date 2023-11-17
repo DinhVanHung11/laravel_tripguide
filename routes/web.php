@@ -14,8 +14,10 @@ use App\Http\Controllers\Admin\UploadController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\SocialAuthController;
 use App\Http\Controllers\UserController as ControllersUserController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,6 +75,11 @@ Route::middleware(['auth:web', 'verified'])->prefix('account')->group(function()
         Route::get('index', 'index')->name('user.booking.index');
     });
 });
+
+//Soical Login
+Route::get('social/auth/redirect', [SocialAuthController::class, 'redirect'])->name('social.auth.redirect');
+
+Route::get('social/auth/callback', [SocialAuthController::class, 'callback'])->name('social.auth.callback');
 
 require __DIR__.'/hotel_route.php';
 require __DIR__.'/auth.php';
