@@ -9,7 +9,7 @@
         <div class="block section-block block-travel">
             <div class="grid grid-cols-4 gap-x-[30px]">
                 <div class="relative travel-item rounded-xl">
-                    <img src="{{ asset('images/travel/travel1.svg') }}" class="h-[323px] w-full object-cover rounded-xl" alt="">
+                    <img data-src="{{ asset('images/travel/travel1.svg') }}" class="h-[323px] w-full object-cover rounded-xl lazy" alt="">
                     <div class="absolute z-10 text-white left-7 bottom-4">
                         <h3 class="text-2xl font-semibold ">Beach Hobby</h3>
                         <div class="flex gap-x-1 gap-y-2">
@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="relative travel-item rounded-xl">
-                    <img src="{{ asset('images/travel/travel2.svg') }}" class="h-[323px] w-full object-cover rounded-xl" alt="">
+                    <img data-src="{{ asset('images/travel/travel2.svg') }}" class="h-[323px] w-full object-cover rounded-xl lazy" alt="">
                     <div class="absolute z-10 text-white left-7 bottom-4">
                         <h3 class="text-2xl font-semibold ">City Tours</h3>
                         <div class="flex gap-x-1 gap-y-2">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="relative travel-item rounded-xl">
-                    <img src="{{ asset('images/travel/travel3.svg') }}" class="h-[323px] w-full object-cover rounded-xl" alt="">
+                    <img data-src="{{ asset('images/travel/travel3.svg') }}" class="h-[323px] w-full object-cover rounded-xl lazy" alt="">
                     <div class="absolute z-10 text-white left-7 bottom-4">
                         <h3 class="text-2xl font-semibold ">Hiking Trips</h3>
                         <div class="flex gap-x-1 gap-y-2">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="relative travel-item rounded-xl">
-                    <img src="{{ asset('images/travel/travel4.svg') }}" class="h-[323px] w-full object-cover rounded-xl" alt="">
+                    <img data-src="{{ asset('images/travel/travel4.svg') }}" class="h-[323px] w-full object-cover rounded-xl lazy" alt="">
                     <div class="absolute z-10 text-white left-7 bottom-4">
                         <h3 class="text-2xl font-semibold ">Sports Trips</h3>
                         <div class="flex gap-x-1 gap-y-2">

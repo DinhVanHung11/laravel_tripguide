@@ -21,7 +21,7 @@ $hotels = $hotelService->getRandomLimit(6);
                             @foreach ( $hotels as $hotel)
                                 <li class="trending-item">
                                     <div class="flex p-6 bg-white rounded-xl gap-x-7">
-                                        <img src="{{ $hotelService->getLocationImage($hotel->location_id) }}" class="w-[160px] h-[160px] rounded-xl object-cover" alt="">
+                                        <img data-src="{{ $hotelService->getLocationImage($hotel->location_id) }}" class="w-[160px] h-[160px] rounded-xl object-cover lazy" alt="">
                                         <div class="flex flex-col justify-between">
                                             <strong class="text-2xl font-bold">{{ $hotelService->getLocationName($hotel->location_id) }}</strong>
                                             <div class="flex items-center gap-x-2">

@@ -24,8 +24,7 @@ $bestPlaces = $countryService->getBestPlaces(8);
                             <a class="bestplace-item-link"
                                 href="{{ route('hotel.list',['location' => Str::slug($bestPlace->name)]) }}"
                             >
-                            {{-- <a class="bestplace-item-link" href="{{URL::to('/hotel.html?location='.Str::slug($bestPlace->name))}}"> --}}
-                                <img class="place-image w-[70px] h-[70px]" src="{{ $bestPlace->image ?? '' }}" alt="">
+                                <img class="place-image w-[70px] h-[70px] lazy" data-src="{{ $bestPlace->image ?? '' }}" alt="">
                                 <strong class="text-base font-bold place-name">{{ $bestPlace->name }}</strong>
                                 <span class="place-destination">{{ $destinationCount }} Destinations</span>
                             </a>

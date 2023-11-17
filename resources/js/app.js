@@ -12,6 +12,10 @@ $.ajaxSetup({
     }
 });
 
+$(function() {
+    $('.lazy').Lazy();
+});
+
 $(document).ready(function(){
     //Modal Authentication
     $('.modal-auth-content .toggle-auth-content').on('click', function(){

@@ -20,7 +20,7 @@ $hotels = $hotelService->getLimit(8);
                         <li class="explore-item">
                             <div class="relative explore-content p-[14px] bg-white border border-[#E7ECF3] rounded-xl">
                                 <a href="#" class="block mb-5">
-                                    <img src="{{ $hotel->image }}" class="h-[152px] w-full rounded-xl object-cover" alt="">
+                                    <img data-src="{{ $hotel->image }}" class="lazy h-[152px] w-full rounded-xl object-cover" alt="">
                                 </a>
                                 <div class="flex items-center mb-3 gap-x-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">

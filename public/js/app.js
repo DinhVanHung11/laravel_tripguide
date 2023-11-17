@@ -5339,6 +5339,9 @@ $.ajaxSetup({
     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
   }
 });
+$(function () {
+  $('.lazy').Lazy();
+});
 $(document).ready(function () {
   //Modal Authentication
   $('.modal-auth-content .toggle-auth-content').on('click', function () {
