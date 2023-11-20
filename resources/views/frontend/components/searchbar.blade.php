@@ -30,7 +30,7 @@ $categories = $categoryService->getParents();
                                 </ul>
                             </div>
                         @endif
-                        <div class="flex items-center font-medium search-options gap-x-5 lg:gap-x-6 lg:text-lg">
+                        <div class="flex items-center font-medium opacity-0 search-options gap-x-5 lg:gap-x-6 lg:text-lg">
                             <div class="search-round search-option search-option-wrap">
                                 <div class="search-option-label"></div>
                                 <span>Round trip</span>

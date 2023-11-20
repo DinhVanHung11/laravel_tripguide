@@ -34,7 +34,12 @@ $hotels = $hotelService->getRandomLimit(6);
                                                 <strong class="text-2xl font-semibold leading-4">${{ $hotel->price }}</strong>
                                                 <span class="font-medium text-[#92929A] leading-4">/night</span>
                                             </div>
-                                            <a class="px-4 py-2 button-primary w-max lg:text-sm" href="#">Book Now</a>
+                                            <a class="px-4 py-2 button-primary w-max lg:text-sm"
+                                                href="{{route('hotel.details',[
+                                                    'slug' => Str::slug($hotel->name),
+                                                    'id' => $hotel->id
+                                                ])}}"
+                                            >Book Now</a>
                                         </div>
                                     </div>
                                 </li>

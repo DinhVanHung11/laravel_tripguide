@@ -19,7 +19,13 @@ $hotels = $hotelService->getLimit(8);
                     @foreach ( $hotels as $hotel)
                         <li class="explore-item">
                             <div class="relative explore-content p-[14px] bg-white border border-[#E7ECF3] rounded-xl">
-                                <a href="#" class="block mb-5">
+                                <a
+                                    href="{{route('hotel.details',[
+                                        'slug' => Str::slug($hotel->name),
+                                        'id' => $hotel->id
+                                    ])}}"
+                                    class="block mb-5"
+                                >
                                     <img data-src="{{ $hotel->image }}" class="lazy h-[152px] w-full rounded-xl object-cover" alt="">
                                 </a>
                                 <div class="flex items-center mb-3 gap-x-2">

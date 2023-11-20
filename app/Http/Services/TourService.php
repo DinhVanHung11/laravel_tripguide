@@ -15,9 +15,7 @@ class TourService
 
     public function getCountry($country_id)
     {
-        $country = Country::find($country_id);
-
-        return $country->name;
+        return Country::find($country_id);
     }
 
     public function create($request)

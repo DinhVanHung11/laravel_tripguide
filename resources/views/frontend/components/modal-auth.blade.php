@@ -1,21 +1,6 @@
 <div id="modal-authorization" class="modal modal-authorization">
     <div class="modal-auth-content modal-auth-signin active">
         <h4>Welcome Back!</h4>
-        <div class="flex auth-quick">
-            <a href="#" class="signin-google-link button-primary google-link">
-                <img src="{{asset('images/icon-gg.svg')}}" alt="">
-                <span>Sign in with Google</span>
-            </a>
-            <a href="#" class="signin-facebook-link facebook-link">
-                {{-- <img src="{{asset('images/icon-text-facebook.svg')}}" alt=""> --}}
-                <i class="text-white fa-brands fa-facebook-f"></i>
-            </a>
-        </div>
-        <div class="auth-or">
-            <span></span>
-            <p>or continue with</p>
-            <span></span>
-        </div>
         <form action="{{route('user.login')}}" method="POST">
             <div class="form-group group-input">
                 <label for="">Email address</label>
@@ -43,16 +28,6 @@
     </div>
     <div class="modal-auth-content modal-auth-signup">
         <h4>Let’s go</h4>
-        <div class="flex auth-quick">
-            <a href="#" class="signup-google-link button-primary google-link">
-                <img src="{{asset('images/icon-gg.svg')}}" alt="">
-                <span>Sign in with Google</span>
-            </a>
-            <a href="{{ route('social.auth.redirect') }}" class="signup-google-link facebook-link">
-                {{-- <img src="{{asset('images/icon-text-facebook.svg')}}" alt=""> --}}
-                <i class="text-white fa-brands fa-facebook-f"></i>
-            </a>
-        </div>
         <form action="{{route('user.store')}}" method="POST">
             <div class="flex form-row">
                 <div class="form-group group-input form-first-name first_name">
@@ -84,10 +59,10 @@
                     </span>
                 </div>
             </div>
-            <div class="form-checkbox group-input auth-terms">
+            <div class="group-input auth-terms">
                 <div class="checkbox-wrap">
-                    <input type="checkbox" name="accept_terms">
-                    <label for="">
+                    <input type="checkbox" name="accept_terms" class="!border cursor-pointer !border-[#ccc]" id="auth-term">
+                    <label for="auth-term" class="cursor-pointer">
                         I’ve read and accepted <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
                     </label>
                 </div>
