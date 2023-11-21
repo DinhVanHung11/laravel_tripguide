@@ -7,7 +7,7 @@
     </div>
     <div class="section-content">
         <div class="block section-block block-travel">
-            <div class="grid grid-cols-4 gap-x-[30px]">
+            <div class="travel-list grid-cols-4 max-lg:grid-cols-2 max-lg:gap-y-7 gap-x-[30px]">
                 <div class="relative travel-item rounded-xl">
                     <img data-src="{{ asset('images/travel/travel1.svg') }}" class="h-[323px] w-full object-cover rounded-xl lazy" alt="">
                     <div class="absolute z-10 text-white left-7 bottom-4">

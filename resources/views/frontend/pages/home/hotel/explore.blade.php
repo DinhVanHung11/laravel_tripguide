@@ -5,7 +5,7 @@ $hotelService = new HotelService;
 $hotels = $hotelService->getLimit(8);
 @endphp
 
-<section class="explore-world row-container">
+<section class="explore-world row-container pb-14">
     <div class="mb-8 section-heading">
         <h2 class="section-title title-theme">Explore The World</h2>
         <p class="section-desc">

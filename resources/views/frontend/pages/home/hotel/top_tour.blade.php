@@ -23,7 +23,7 @@ $tours = $tourService->getAll();
                         <li class="tour-item">
                             <div class="relative tour-content">
                                 <a  href="{{ route('hotel.list',['location' => Str::slug($country->name)]) }}" class="block w-full">
-                                    <img data-src="{{ $tour->image }}" class="h-[495px] w-full rounded-xl lazy" alt="">
+                                    <img data-src="{{ $tour->image }}" class="h-[495px] w-full rounded-xl object-cover lazy" alt="">
                                 </a>
                                 <div class="absolute rounded-3xl py-2 text-xl text-white tour-country left-7 top-7 px-7 bg- [#14141633]">
                                     {{ $country->name }}

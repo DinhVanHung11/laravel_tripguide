@@ -7,16 +7,16 @@ $categories = $categoryService->getParents();
 
 @if (!isset($hideSearchBar))
     <section class="block-search max-w-[1440px] mx-auto">
-        @if (!isset($isCategoryPage))
+        @if (!isset($hiddenBgHeader))
             <img class="max-md:hidden" src="{{asset('images/header-bg.jpg')}}" alt="">
-            <img class="object-cover w-full md:hidden max-h-[604px]" src="{{asset('images/header-bg-mb.jpg')}}" alt="">
+            <img class="object-cover w-full md:hidden h-[350px]" src="{{asset('images/header-bg-mb.jpg')}}" alt="">
         @endif
 
-        <div class="w-full lg:w-[81.25%] max-lg:px-5 mx-auto {{!isset($isCategoryPage) ? 'mt-[-100px]' : 'mt-14' }} relative z-10">
-            <form action="{{ route('hotel.location.filter') }}" class="flex items-end justify-between w-full p-5 bg-white shadow-md search-content rounded-2xl lg:py-7 lg:px-14 max-md:flex-wrap" method="POST">
+        <div class="w-full lg:w-[81.25%] max-lg:px-5 mx-auto {{!isset($hiddenBgHeader) ? 'mt-[-100px]' : 'mt-14' }} relative z-10">
+            <form action="{{ route('hotel.location.filter') }}" class="flex items-end justify-between w-full p-5 bg-white shadow-md search-content rounded-2xl lg:py-7 lg:px-14 max-md:flex-wrap max-lg:gap-x-5" method="POST">
                 <div class="w-full search-main">
-                    <div class="flex items-center justify-between search-top max-md:flex-wrap {{isset($isCategoryPage) ? 'no-category' : ''}}">
-                        @if (!isset($isCategoryPage))
+                    <div class="flex items-center justify-between search-top max-md:flex-wrap {{isset($hiddenBgHeader) ? 'no-category' : ''}}">
+                        @if (!isset($hiddenBgHeader))
                             <div class="search-cate max-md:w-full">
                                 <ul class="flex items-center search-cate-list max-lg:justify-between lg:gap-x-8">
                                     @if (count($categories) > 0)
@@ -29,18 +29,18 @@ $categories = $categoryService->getParents();
                                     @endif
                                 </ul>
                             </div>
+                            <div class="flex items-center font-medium opacity-0 max-sm:hidden search-options gap-x-5 lg:gap-x-6 lg:text-lg">
+                                <div class="search-round search-option search-option-wrap">
+                                    <div class="search-option-label"></div>
+                                    <span>Round trip</span>
+                                    <i class="fas fa-chevron-down text-[#84878B] text-xs"></i>
+                                </div>
+                                <div class="search-person search-option search-option-wrap">
+                                    <span>1 passenger</span>
+                                    <i class="fas fa-chevron-down text-[#84878B] text-xs"></i>
+                                </div>
+                            </div>
                         @endif
-                        <div class="flex items-center font-medium opacity-0 search-options gap-x-5 lg:gap-x-6 lg:text-lg">
-                            <div class="search-round search-option search-option-wrap">
-                                <div class="search-option-label"></div>
-                                <span>Round trip</span>
-                                <i class="fas fa-chevron-down text-[#84878B] text-xs"></i>
-                            </div>
-                            <div class="search-person search-option search-option-wrap">
-                                <span>1 passenger</span>
-                                <i class="fas fa-chevron-down text-[#84878B] text-xs"></i>
-                            </div>
-                        </div>
                     </div>
                     <div class="flex w-full search-bottom lg:gap-x-2 gap-[10px]">
                         <div class="relative search-box location">

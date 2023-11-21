@@ -208,13 +208,27 @@ $(document).ready(function(){
             {
                 breakpoint: 1023,
                 settings: {
-                    arrows: false,
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 },
             },
         ],
     });
+
     //End Top Tour Slide
 
     //Explore World Slide
@@ -234,11 +248,24 @@ $(document).ready(function(){
             {
                 breakpoint: 1023,
                 settings: {
-                    arrows: false,
-                    slidesToShow: 1,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 },
             },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                },
+            },
+            {
+                breakpoint: 640,
+                settings: {
+                    slidesToShow: 1.5,
+                    slidesToScroll: 1,
+                },
+            }
         ],
     });
     //End Explore World Slide

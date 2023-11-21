@@ -1,3 +1,21 @@
-.footer-form-subscribe{
-    // background:  url("images/bg-footer.png") no-repeat center center / cover;
+@media(max-width: 640px){
+    .footer-info{
+        flex-direction: column;
+
+        > div{
+            width: 100%;
+        }
+
+        .footer-info-item{
+            padding-bottom: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid @color-grayc6;
+        }
+    }
+
+    .footer-form-subscribe{
+        width: ~"calc(100% - 40px)";
+        max-width: unset !important;
+    }
 }
+

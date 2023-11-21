@@ -12,7 +12,6 @@ Route::get('hotel.html', [HotelController::class, 'list'])->name('hotel.list');
 Route::prefix('hotel')->group(function(){
     Route::controller(HotelController::class)->group(function(){
         Route::get('{slug}/{id}', 'show')->name('hotel.details');
-        Route::post('filter','search')->name('hotel.location.filter');
     });
 });
 

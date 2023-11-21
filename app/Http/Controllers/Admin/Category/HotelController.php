@@ -135,7 +135,7 @@ class HotelController extends Controller
             'checkin' => $request->check_in ?? '',
             'checkout' => $request->check_out ?? '',
             'bodyClass' => 'category-view',
-            'isCategoryPage' => true
+            'hiddenBgHeader' => true
         ]);
     }
 
