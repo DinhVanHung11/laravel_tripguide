@@ -3,29 +3,29 @@
     $hotelAmenities = $hotelService->getFilterOptions($hotel->optionsAttributes, 'amenities');
 @endphp
 
-<div class="hotel-info-left w-[60%]">
+<div class="hotel-info-left lg:w-[60%]">
     <div class="info-title pb-6 mb-8 border-b border-[#E6E8EC]">
-        <h2 class="text-[40px] font-bold mb-3 laeading-[60px]">Exclusive room in house</h2>
-        <strong class="font-medium text-2xl text-[#777E90]">
+        <h2 class="text-[40px] max-md:text-2xl font-bold mb-3 laeading-[60px]">{{ $hotel->name }}</h2>
+        <strong class="font-medium text-2xl max-md:text-xl text-[#777E90]">
             {{ $hotelService->getLocationName($hotel->location_id) }},
             {{ $hotelService->getCountryName($hotel->location_id) }}
         </strong>
     </div>
     <div class="mb-[60px] info-description">
-        <ul class="flex mb-5 actions-list gap-x-10">
+        <ul class="flex mb-5 overflow-y-hidden actions-list gap-x-10 max-md:overflow-x-auto">
             @if ($hotel->description)
                 <li class="action-item">
-                    <a href="#hotel-features">Description</a>
+                    <a class="inline-block w-max" href="#hotel-features">Description</a>
                 </li>
             @endif
             <li class="action-item">
-                <a href="#hotel-features">Features</a>
+                <a class="inline-block w-max" href="#hotel-features">Features</a>
             </li>
             <li class="action-item">
-                <a href="#hotel-rooms">Room & Price</a>
+                <a class="inline-block w-max" href="#hotel-rooms">Room & Price</a>
             </li>
             <li class="action-item">
-                <a href="#hotel-reviews">Reviews</a>
+                <a class="inline-block w-max" href="#hotel-reviews">Reviews</a>
             </li>
         </ul>
         <p class="mb-10 hotel-desc" id="hotel-desc">

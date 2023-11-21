@@ -11,11 +11,11 @@ $hotelService = new HotelService;
     @include('frontend.pages.details.image')
     @include('frontend.pages.details.tags')
     <form action="{{ route('hotel.booking.add') }}" method="POST" id="form-booking">
-        <div class="flex gap-x-[90px] pb-16">
+        <div class="pb-16 lg:flex info-top">
             @include('frontend.pages.details.info_left')
             @include('frontend.pages.details.info_right')
         </div>
-        <div class="info-bottom max-w-[970px] mx-auto pt-16">
+        <div class="info-bottom max-w-[970px] mx-auto lg:pt-16">
             @include('frontend.pages.details.room')
         </div>
     </form>

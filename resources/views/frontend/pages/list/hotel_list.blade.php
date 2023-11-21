@@ -6,11 +6,11 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Str;
 
 $hotelService = new HotelService;
-$hotels = $hotelService->getHotelsByLocation($location->id, 6);
 @endphp
 
 @section('frontend.category.list')
-    <div class="catgory-list">
+    <div class="relative">
+        @include('frontend.pages.list.sort')
         @if (!is_null($hotels) && !empty($hotels) && count($hotels) > 0)
             <ul class="hotel-list items-list flex flex-col gap-y-[50px]">
                 @foreach ( $hotels as $hotel )
@@ -27,9 +27,9 @@ $hotels = $hotelService->getHotelsByLocation($location->id, 6);
                                         'id' => $hotel->id
                                     ])}}"
                                 >
-                                    <strong class="text-[40px] font-bold">{{ $hotel->name }}</strong>
+                                    <strong class="max-md:text-3xl text-[40px] font-bold">{{ $hotel->name }}</strong>
                                 </a>
-                                <div class="flex items-center mb-10 gap-x-5">
+                                <div class="flex items-center mb-10 max-md:mb-6 gap-x-5">
                                     @if ($hotel->rating)
                                         <div class="flex items-center gap-x-2">
                                             <img src="{{ asset('images/icon-star.svg') }}" alt="">
@@ -46,22 +46,22 @@ $hotels = $hotelService->getHotelsByLocation($location->id, 6);
                                         </span>
                                     </div>
                                 </div>
-                                <div class="flex items-center mb-4 gap-x-5 gap-y-4">
+                                <div class="flex items-center mb-4 max-md:items-start max-md:flex-col gap-x-5 gap-y-4">
                                     <div class="flex items-center gap-x-2">
                                         <img src="{{ asset('images/icon-location.svg') }}" alt="">
-                                        <span>
+                                        <span class="font-medium">
                                             {{ $hotelService->getLocationName($hotel->location_id) }},
                                             {{ $hotelService->getCountryName($hotel->location_id) }}
                                         </span>
                                     </div>
                                     <div class="flex items-center gap-x-2">
                                         <img src="{{ asset('images/icon-calendar.svg') }}" alt="">
-                                        <span>15.05.2021-16.05.2021</span>
+                                        <span class="font-medium">15.05.2021-16.05.2021</span>
                                     </div>
                                 </div>
                                 <div class="flex items-center mb-10 gap-x-2">
                                     <img src="{{ asset('images/icon-departure.svg') }}" alt="">
-                                    <span>Departure from {{ $hotelService->getCountryName($hotel->location_id) }}</span>
+                                    <span class="font-medium">Departure from {{ $hotelService->getCountryName($hotel->location_id) }}</span>
                                 </div>
                                 <div class="flex items-end justify-between">
                                     @if (!empty($hotelFeatures))
@@ -96,7 +96,7 @@ $hotels = $hotelService->getHotelsByLocation($location->id, 6);
                     </li>
                 @endforeach
             </ul>
-            <div class="pager">
+            <div class="pager max-lg:mb-10">
                 {{$hotels->appends(request()->query())->links("pagination::bootstrap-4")}}
             </div>
         @else

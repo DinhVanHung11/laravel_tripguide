@@ -1,3 +1,11 @@
+.footer-form-subscribe{
+    padding: 20px 16px;
+
+    h3{
+        font-size: 20px;
+    }
+}
+
 @media(max-width: 640px){
     .footer-info{
         flex-direction: column;
@@ -16,6 +24,30 @@
     .footer-form-subscribe{
         width: ~"calc(100% - 40px)";
         max-width: unset !important;
+    }
+}
+
+@media(min-width: 860px){
+    .footer-form-subscribe{
+        padding: 40px;
+
+        h3{
+            font-size: 34px;
+        }
+    }
+}
+
+@media(min-width: 1200px){
+    .footer-form-subscribe{
+        padding: 62px 90px;
+
+        h3{
+            font-size: 44px;
+        }
+
+        form{
+            gap: 0 150px;
+        }
     }
 }
 

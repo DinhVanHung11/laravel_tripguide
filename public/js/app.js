@@ -5570,6 +5570,15 @@ $(document).ready(function () {
   });
   //End Details Tabs Desc
 
+  //Filter Modal
+  $('.filter-open').on('click', function () {
+    $('.block-filter').addClass('show');
+  });
+  $('.filter-close').on('click', function () {
+    $('.block-filter').removeClass('show');
+  });
+  //End Filter Modal
+
   //Tab My Bookings
   $('.bookings-tabs-nav .tab-item').on('click', function () {
     var self = $(this);

@@ -13,9 +13,9 @@ $hotel = $hotelService->getHotel($booking->hotel_id);
 @endphp
 
 @section('main.layout.content')
-    <div class="max-w-[1170px] mx-auto mt-10 flex gap-x-[35px]">
-        <form class="book-payment w-[62%]">
-            <div class="book-info w-[70%] mb-10">
+    <div class="max-w-[1170px] checkout-container mx-auto mt-10 flex gap-x-[35px]">
+        <form class="book-payment w-[55%]">
+            <div class="mb-10 book-info">
                 <h1 class="text-[40px] font-bold pb-6 border-b-2 border-[#eee] mb-10">Confirm your Book</h1>
                 <div class="pr-6 mb-7 tour-info">
                     <h3 class="text-[34px] font-bold mb-7">Your Tour</h3>
@@ -44,31 +44,31 @@ $hotel = $hotelService->getHotel($booking->hotel_id);
                     </div>
                 </div>
             </div>
-            <div class="mb-8 payment-method">
+            <div class="mb-5 payment-method">
                 <h3 class="text-[34px] font-bold mb-7">Payment Mothods</h3>
-                <ul class="flex mb-10 gap-x-3 pb-7">
-                    <div class="p-3 bg-white rounded-md cursor-pointer payment-method-item active"
+                <ul class="flex mb-5 gap-x-3 pb-7">
+                    {{-- <div class="p-3 bg-white rounded-md cursor-pointer payment-method-item active"
                         data-url="{{ route('hotel.booking.crash.delivery') }}"
                     >
                         <img src="{{ asset('images/icon-cash-delivery.jpg') }}" class="max-h-7" alt="">
-                    </div>
+                    </div> --}}
                     <div class="p-3 bg-white rounded-md cursor-pointer payment-method-item"
                         data-url="{{ route('hotel.booking.vnpay') }}"
                     >
                         <img src="{{ asset('images/icon-vnpay.png') }}" class="max-h-7" alt="">
                     </div>
-                    <div class="p-3 bg-white rounded-md cursor-pointer payment-method-item"
-                        {{-- data-url="{{ route('hotel.booking.vnpay') }}" --}}
+                    {{-- <div class="p-3 bg-white rounded-md cursor-pointer payment-method-item"
+                        data-url="{{ route('hotel.booking.vnpay') }}"
                     >
                         <img src="{{ asset('images/icon-paypal.svg') }}" class="max-h-7" alt="">
-                    </div>
+                    </div> --}}
                 </ul>
             </div>
-            <button class="px-5 button-primary rounded-3xl">Confirm and reserve</button>
+            <button type="button" class="px-5 button-primary !bg-[#3B71FE] rounded-3xl" id="confirm-payment">Confirm and reserve</button>
             <input type="hidden" name="price" value="{{ $booking->price }}">
             @csrf
         </form>
-        <div class="book-summary w-[38%]">
+        <div class="book-summary w-[45%]">
             <div class="py-10 bg-white px-9 rounded-2xl border-2 border-[#E7ECF3]">
                 <p class="mb-4 text-lg font-medium">{{ $hotel->name }}</p>
                 <div class="flex items-center mb-4 text-sm font-medium gap-x-2">

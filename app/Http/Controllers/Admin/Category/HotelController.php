@@ -129,13 +129,16 @@ class HotelController extends Controller
     public function list(Request $request)
     {
         $location = $this->countryService->getBySlug($request->location);
+        $sortType = $this->hotelService->getSortType($request);
 
         return view('frontend.pages.list.hotel_list', [
             'location' => $location,
             'checkin' => $request->check_in ?? '',
             'checkout' => $request->check_out ?? '',
             'bodyClass' => 'category-view',
-            'hiddenBgHeader' => true
+            'hiddenBgHeader' => true,
+            'sortType' => $sortType,
+            'hotels' => $this->hotelService->getListFilter($request,$location,6)
         ]);
     }
 

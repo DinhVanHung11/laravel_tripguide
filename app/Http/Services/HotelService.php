@@ -346,12 +346,41 @@ class HotelService
     {
         $price = $hotel->price;
         $price_sale = $hotel->price_sale;
+        $number = (1 - $price_sale/$price)*100;
 
-        return (1 - $price_sale/$price)*100;
+        return number_format((float)$number, 2, '.', '');
     }
 
     public function getRoom($id)
     {
         return HotelRoom::where('id', $id)->first();
+    }
+
+    public function getListFilter($request,$location, $limit)
+    {
+        $priceSort = $request->price ?? null;
+
+        return Hotel::when($location != null, function($query) use($location){
+                $query->where('location_id', $location->id);
+            })
+            ->when($priceSort == null, function($query){
+                $query->orderByDesc('id');
+            })
+            ->when($priceSort != null, function($query) use($priceSort){
+                $query->orderBy('price', $priceSort);
+            })
+            ->paginate($limit);
+    }
+
+    public function getSortType($request)
+    {
+        switch ($request->price) {
+            case 'asc':
+                return 'Price Low To High';
+            case 'desc':
+                return 'Price High To Low';
+            default:
+                return 'Default';
+        }
     }
 }

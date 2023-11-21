@@ -16,7 +16,7 @@
             @endif
             @include('frontend.components.header')
         </header>
-        <main class="{{ isset($pageFullWidth) ? 'page-main-full-width' : 'page-main'}}">
+        <main class="{{'page-main-full-width'}}">
             <div class="page-messages">
                 @if ($errors->any())
                     <div class="alert alert-danger">

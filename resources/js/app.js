@@ -286,6 +286,16 @@ $(document).ready(function(){
     });
     //End Details Tabs Desc
 
+    //Filter Modal
+    $('.filter-open').on('click', () => {
+        $('.block-filter').addClass('show');
+    });
+
+    $('.filter-close').on('click', () => {
+        $('.block-filter').removeClass('show');
+    });
+    //End Filter Modal
+
     //Tab My Bookings
     $('.bookings-tabs-nav .tab-item').on('click', function(){
         var self = $(this);

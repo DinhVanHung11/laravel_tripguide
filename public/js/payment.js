@@ -20,5 +20,12 @@ $('.payment-method-item').click(function () {
     }
   });
 });
+$('#confirm-payment').on('click', function () {
+  var self = $(this);
+  var form = self.closest('form');
+  if (form.attr('action') != undefined) {
+    form.submit();
+  }
+});
 /******/ })()
 ;

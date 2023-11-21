@@ -4,8 +4,8 @@ use App\Http\Services\AttributeService;
 $attrService = new AttributeService;
 @endphp
 
-<div class="hotel-room" id="hotel-room">
-    <h2 class="text-[40px] font-bold mb-3 laeading-[60px]">Select Room</h2>
+<div class="mb-10 hotel-room" id="hotel-room">
+    <h2 class="text-[40px] font-bold mb-3 laeading-[60px] max-md:text-2xl">Select Room</h2>
     <div class="mb-2 message-error error-room"></div>
     <ul class="flex flex-col hotel-room-list gap-y-7">
         @if ($hotel->rooms && count($hotel->rooms) > 0)

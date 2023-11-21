@@ -12,7 +12,6 @@ class MainController extends Controller
     {
         return view('frontend.pages.home',[
             'bodyClass' => 'home-page',
-            'pageFullWidth' => true
         ]);
     }
 }

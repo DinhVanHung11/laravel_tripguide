@@ -513,6 +513,12 @@ input:focus {
   border-radius: 50%;
   background: #84878B;
 }
+.footer-form-subscribe {
+  padding: 20px 16px;
+}
+.footer-form-subscribe h3 {
+  font-size: 20px;
+}
 @media (max-width: 640px) {
   .footer-info {
     flex-direction: column;
@@ -528,6 +534,25 @@ input:focus {
   .footer-form-subscribe {
     width: calc(100% - 40px);
     max-width: unset !important;
+  }
+}
+@media (min-width: 860px) {
+  .footer-form-subscribe {
+    padding: 40px;
+  }
+  .footer-form-subscribe h3 {
+    font-size: 34px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-form-subscribe {
+    padding: 62px 90px;
+  }
+  .footer-form-subscribe h3 {
+    font-size: 44px;
+  }
+  .footer-form-subscribe form {
+    gap: 0 150px;
   }
 }
 body {
@@ -774,6 +799,40 @@ body {
   background: linear-gradient(9deg, rgba(31, 31, 31, 0.63) 17.12%, rgba(35, 35, 35, 0) 92.69%);
   border-radius: inherit;
 }
+@media (max-width: 1023px) {
+  .block-filter {
+    position: fixed;
+    width: 100% !important;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99;
+    background: white;
+    transform: translateX(-120%);
+    transition: all 0.3s;
+  }
+  .block-filter.show {
+    transform: translateX(0);
+  }
+  .block-filter .filter-list {
+    padding: 20px;
+  }
+}
+@media (max-width: 640px) {
+  .items-list.hotel-list .hotel-info {
+    flex-direction: column;
+  }
+  .items-list.hotel-list .hotel-info > img {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 12px 12px 0 0;
+  }
+  .items-list.hotel-list .hotel-info > div {
+    border-radius: 0 0 12px 12px;
+  }
+}
 .pager {
   margin-top: 30px;
 }
@@ -812,11 +871,32 @@ body {
   border-radius: 0 0 24px 24px;
 }
 .catalog-detail-view .main {
-  padding-inline: 100px;
+  padding-inline: 20px;
+}
+.catalog-detail-view .info-top {
+  gap: 0 40px;
+}
+@media (min-width: 640px) {
+  .catalog-detail-view .main {
+    padding-inline: 40px;
+  }
+}
+@media (min-width: 1200px) {
+  .catalog-detail-view .main {
+    padding-inline: 100px;
+  }
+  .catalog-detail-view .info-top {
+    gap: 0 90px;
+  }
 }
 .catalog-hotel .actions-list {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
   padding-bottom: 18px;
   border-bottom: 2px solid #E6E8EC;
+}
+.catalog-hotel .actions-list::-webkit-scrollbar {
+  display: none;
 }
 .catalog-hotel .actions-list .action-item {
   position: relative;
@@ -896,6 +976,10 @@ body {
 .checkout-index-index {
   background: #fafafb;
 }
+.checkout-index-index .main {
+  padding: 0 20px;
+  margin-bottom: 40px;
+}
 .checkout-index-index .payment-method .payment-method-item {
   border: 0.5px solid #e6e6e6;
   transition: all 0.25s;
@@ -918,6 +1002,27 @@ body {
 }
 .checkout-index-index .form-group label {
   font-size: 18px;
+}
+@media (max-width: 641px) {
+  .checkout-index-index .checkout-container {
+    flex-direction: column-reverse;
+    gap: 30px 0;
+  }
+  .checkout-index-index .book-payment {
+    width: 100%;
+  }
+  .checkout-index-index .book-summary {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  .checkout-index-index .main {
+    padding: 0 80px;
+    margin-bottom: 40px;
+  }
+  .checkout-index-index .book-info {
+    width: 80%;
+  }
 }
 .account-booking-index {
   background: #FAFAFB;
@@ -1607,6 +1712,8 @@ video {
   margin-top: -100px;
 }.mt-\[120px\] {
   margin-top: 120px;
+}.mb-\[26px\] {
+  margin-bottom: 26px;
 }.block {
   display: block;
 }.inline-block {
@@ -1748,6 +1855,12 @@ video {
   width: max-content;
 }.w-\[33\%\] {
   width: 33%;
+}.w-\[40\%\] {
+  width: 40%;
+}.w-\[45\%\] {
+  width: 45%;
+}.w-\[55\%\] {
+  width: 55%;
 }.max-w-6xl {
   max-width: 72rem;
 }.max-w-7xl {
@@ -1906,6 +2019,9 @@ video {
   row-gap: 14px;
 }.gap-y-\[50px\] {
   row-gap: 50px;
+}.gap-x-\[40px\] {
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 }.space-x-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1918,6 +2034,8 @@ video {
   overflow: hidden;
 }.overflow-y-auto {
   overflow-y: auto;
+}.overflow-y-hidden {
+  overflow-y: hidden;
 }.rounded {
   border-radius: 0.25rem;
 }.rounded-2xl {
@@ -2088,6 +2206,9 @@ video {
 }.bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}.bg-slate-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(51 65 85 / var(--tw-bg-opacity));
 }.bg-opacity-20 {
   --tw-bg-opacity: 0.2;
 }.bg-opacity-\[0\.15\] {
@@ -2595,6 +2716,10 @@ video {
     margin-bottom: 30px;
   }.max-lg\:mt-3 {
     margin-top: 0.75rem;
+  }.max-lg\:mb-10 {
+    margin-bottom: 2.5rem;
+  }.max-lg\:flex {
+    display: flex;
   }.max-lg\:hidden {
     display: none;
   }.max-lg\:w-full {
@@ -2605,6 +2730,8 @@ video {
     flex: 1 1 0%;
   }.max-lg\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }.max-lg\:flex-col {
+    flex-direction: column;
   }.max-lg\:justify-center {
     justify-content: center;
   }.max-lg\:justify-between {
@@ -2653,6 +2780,8 @@ video {
     order: 2;
   }.max-md\:mb-2 {
     margin-bottom: 0.5rem;
+  }.max-md\:mb-6 {
+    margin-bottom: 1.5rem;
   }.max-md\:hidden {
     display: none;
   }.max-md\:w-full {
@@ -2661,8 +2790,12 @@ video {
     flex-direction: column;
   }.max-md\:flex-wrap {
     flex-wrap: wrap;
+  }.max-md\:items-start {
+    align-items: flex-start;
   }.max-md\:gap-y-5 {
     row-gap: 1.25rem;
+  }.max-md\:overflow-x-auto {
+    overflow-x: auto;
   }.max-md\:py-4 {
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -2677,6 +2810,12 @@ video {
   }.max-md\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
+  }.max-md\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }.max-md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }@media not all and (min-width: 640px) {.max-sm\:hidden {
     display: none;
@@ -2762,6 +2901,8 @@ video {
     width: 74.35%;
   }.lg\:w-\[81\.25\%\] {
     width: 81.25%;
+  }.lg\:w-\[60\%\] {
+    width: 60%;
   }.lg\:gap-x-2 {
     -moz-column-gap: 0.5rem;
          column-gap: 0.5rem;
@@ -2777,6 +2918,9 @@ video {
   }.lg\:gap-x-9 {
     -moz-column-gap: 2.25rem;
          column-gap: 2.25rem;
+  }.lg\:gap-x-\[90px\] {
+    -moz-column-gap: 90px;
+         column-gap: 90px;
   }.lg\:border-2 {
     border-width: 2px;
   }.lg\:px-10 {
@@ -2803,6 +2947,11 @@ video {
   }.lg\:py-\[13\.5px\] {
     padding-top: 13.5px;
     padding-bottom: 13.5px;
+  }.lg\:px-\[60px\] {
+    padding-left: 60px;
+    padding-right: 60px;
+  }.lg\:pt-16 {
+    padding-top: 4rem;
   }.lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;

@@ -1,5 +1,5 @@
-<div class="flex-1 info-right">
-    <div class="px-10 py-5 order-summary bg-white border border-[#EAEAEA] rounded-2xl">
+<div class="w-[40%] info-right">
+    <div class="px-10 max-md:px-5 py-5 order-summary bg-white border border-[#EAEAEA] rounded-2xl">
         <div class="flex items-center justify-between info-price pb-[16px] border-b border-[#E6E8EC] mb-5">
             <span class="final-price">
                 <strong class="text-[34px] font-bold price-per-night">${{ $hotel->price ?? $hotel->price_sale }}</strong>
