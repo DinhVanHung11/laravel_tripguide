@@ -1,4 +1,4 @@
-<div class="w-[40%] info-right">
+<div class="w-[40%] max-lg:w-full info-right">
     <div class="px-10 max-md:px-5 py-5 order-summary bg-white border border-[#EAEAEA] rounded-2xl">
         <div class="flex items-center justify-between info-price pb-[16px] border-b border-[#E6E8EC] mb-5">
             <span class="final-price">
